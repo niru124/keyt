@@ -67,7 +67,8 @@ echo "✅ Device string in $target_file has been updated to /dev/input/$selected
 # Step 6: Build or run the project
 echo -e "\n🚀 Step 6: Run the project if already built, otherwise build and run..."
 
-executable="/home/nirantar/Downloads/TUI/examples/build/a.out"
+
+executable="$(pwd)/build/a.out"
 
 # if [ -f "$executable" ]; then
 #     echo "🟢 Executable found. Running it now..."
@@ -75,7 +76,7 @@ executable="/home/nirantar/Downloads/TUI/examples/build/a.out"
 # else 
     echo "🔧 Building the project..."
 
-    project_dir="/home/nirantar/Downloads/TUI/examples"
+    project_dir="$(pwd)"
     build_dir="$project_dir/build"
 
     cd "$project_dir" || { echo "❌ Failed to enter project directory."; exit 1; }
