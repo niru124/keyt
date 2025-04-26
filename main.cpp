@@ -121,7 +121,7 @@ int main() {
                    }),
              hbox({make_box(9, 3, "Ctrl",29), make_box(9, 3, "Win",125),
                    make_box(9, 3, "Alt",56), make_box(38, 3, "    Spacebar    ",57),
-                   make_box(7, 3, "Alt",100), make_box(7, 3, "Ctrl",0)
+                   make_box(7, 3, "Alt",100), make_box(7, 3, "Ctrl",97)
                    })
             }));
             });
@@ -138,38 +138,38 @@ int main() {
                    make_box(7, 3, "F8",66), make_box(7, 3, "F9",67),
                    make_box(7, 3, "F10",68), make_box(7, 3, "F11",87),
                    make_box(7, 3, "F12",88), text("  "), make_box(6, 3, "Prt",99),
-                   make_box(6, 3, "Scr",0), make_box(6, 3, "Ply",0),make_box(6,3,"NL",0),make_box(6,3,"/",0),make_box(6,3,"*",0),make_box(6,3,"-",0)}),
+                   make_box(6, 3, "Scr",0), make_box(6, 3, "Ply",0)}),
              hbox({make_box(6, 3, "~",41), make_box(6, 3, "1",2), make_box(6, 3, "2",3),
                    make_box(6, 3, "3",4), make_box(6, 3, "4",5), make_box(6, 3, "5",6),
                    make_box(6, 3, "6",7), make_box(6, 3, "7",8), make_box(6, 3, "8",9),
                    make_box(6, 3, "9",10), make_box(6, 3, "0",11), make_box(6, 3, "-",12),
                    make_box(6, 3, "=",13), make_box(12, 3, "Backspace",14), text("  "),
                    make_box(6, 3, "Ins",110), make_box(6, 3, "Home",102),
-                   make_box(6, 3, "PgUp",104)}),
+                   make_box(6, 3, "PgUp",104),text("  "),make_box(6,3,"NL",0),make_box(6,3,"/",0),make_box(6,3,"*",0),make_box(6,3,"-",0)}),
              hbox({make_box(9, 3, "Tab",15), make_box(6, 3, "Q",16), make_box(6, 3, "W",17),
                    make_box(6, 3, "E",18), make_box(6, 3, "R",19), make_box(6, 3, "T",20),
                    make_box(6, 3, "Y",21), make_box(6, 3, "U",22), make_box(6, 3, "I",23),
                    make_box(6, 3, "O",24), make_box(6, 3, "P",25), make_box(6, 3, "[",26),
                    make_box(6, 3, "]",27), make_box(9, 3, "\\",43), text("  "),
                    make_box(6, 3, "Del",111), make_box(6, 3, "End",107),
-                   make_box(6, 3, "PgDn",109)}),
+                   make_box(6, 3, "PgDn",109),text("  "),make_box(6,3,"7",0),make_box(6,3,"8",0),make_box(6,3,"9",0),make_box(6,3,"+",0)}),
              hbox({make_box(10, 3, "Caps",58), make_box(6, 3, "A",30),
                    make_box(6, 3, "S",31), make_box(6, 3, "D",32), make_box(6, 3, "F",33),
                    make_box(6, 3, "G",34), make_box(6, 3, "H",35), make_box(6, 3, "J",36),
                    make_box(6, 3, "K",37), make_box(6, 3, "L",38), make_box(6, 3, ";",39),
-                   make_box(6, 3, "'",40), make_box(14, 3, "Enter",28)}),
+                   make_box(6, 3, "'",40), make_box(14, 3, "Enter",28),text("                      "),make_box(6,3,"4",0),make_box(6,3,"5",0),make_box(6,3,"6",0),make_box(6,3,"+",0)}),
              hbox({make_box(15, 3, "Shift",42), make_box(6, 3, "Z",44),
                    make_box(6, 3, "X",45), make_box(6, 3, "C",46), make_box(6, 3, "V",47),
                    make_box(6, 3, "B",48), make_box(6, 3, "N",49), make_box(6, 3, "M",50),
                    make_box(6, 3, ",",51), make_box(6, 3, ".",52), make_box(6, 3, "/",53),
                    make_box(15, 3, "Shift",54), text("        "),
-                   make_box(6, 3, "↑",103)}),
+                   make_box(6, 3, "↑",103),text("        "),make_box(6,3,"1",0),make_box(6,3,"2",0),make_box(6,3,"3",0),make_box(6,3,"Ent",0)}),
              hbox({make_box(9, 3, "Ctrl",29), make_box(9, 3, "Win",125),
                    make_box(9, 3, "Alt",56), make_box(38, 3, "    Spacebar    ",57),
-                   make_box(7, 3, "Alt",100), make_box(7, 3, "Ctrl",0),
+                   make_box(7, 3, "Alt",100), make_box(7, 3, "Ctrl",97),
                    text("             "),
                    make_box(6, 3, "←",105), make_box(6, 3, "↓",108),
-                   make_box(6, 3, "→",106)})
+                   make_box(6, 3, "→",106),text("  "),make_box(12,3,"-",0),make_box(6,3,".",0),make_box(6,3,"Ent",0)})
             }));
     });
             break;
@@ -226,3 +226,4 @@ int main() {
     inputThread.join();
     return 0;
 }
+
