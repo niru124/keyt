@@ -1,12 +1,7 @@
-//menu
-#include "ftxui/component/captured_mouse.hpp"      // for ftxui
 #include "ftxui/component/component.hpp"           // for Menu
-#include "ftxui/component/component_options.hpp"   // for MenuOption
 #include "ftxui/component/screen_interactive.hpp"  // for ScreenInteractive
-
 #include "ftxui/component/event.hpp"          // for Event
-#include "ftxui/component/mouse.hpp" // for Mouse, Mouse::Left, Mouse::Middle, Mouse::None, Mouse::Pressed, Mouse::Released, Mouse::Right, Mouse::WheelDown, Mouse::WheelUp
-
+#include <array>
 #include <cmath>
 #include <ftxui/component/component.hpp>
 #include <ftxui/dom/elements.hpp>
@@ -22,34 +17,10 @@
 using namespace std;
 using namespace ftxui;
 
-static vector<int>change(256,-1);  
 const char *device = "/dev/input/event16"; // Adjusted accordingly to script
-vector<int> keyState(256, 0);
+array<int,256> keyState;
 ScreenInteractive screen = ScreenInteractive::Fullscreen();
 
-
-Element make_box2(int dimx, int dimy, string inside, int keycode) {
-    int state = keyState[keycode];
-// auto box= vbox({
-//     text(" "+ inside+" "),
-// }) | border|size(HEIGHT,EQUAL,dimy);
-               // size(WIDTH, EQUAL, dimy); 
-  auto cell = [](string inside) { return text(inside) | border; };
-    auto box=gridbox({
-            {cell(inside)}
-            });
-    if (state == 2) {
-        box |= color(Color::RGB(255,255,255)); // Pressed
-        change[keycode]=1;
-    } else if (state == 1) {
-        box |= color(Color::Green);  // Released recently
-        change[keycode]=1;
-    } else {
-        box |= color(Color::Red);    // Idle
-    }
-
-    return box;
-}
 
 Element make_box(int dimx, int dimy, string inside, int keycode) {
     int state = keyState[keycode];
@@ -60,14 +31,12 @@ Element make_box(int dimx, int dimy, string inside, int keycode) {
 
     if (state == 2) {
         box |= color(Color::RGB(255,255,255)); // Pressed
-        change[keycode]=1;
     } else if (state == 1) {
         box |= color(Color::Green);  // Released recently
-        change[keycode]=1;
+        keyState[keycode]=1;
     } else {
         box |= color(Color::Red);    // Idle
     }
-
     return box;
 }
 
@@ -104,6 +73,7 @@ int main() {
     "75% keyboard",
     "100% keyboard",
     };
+
     int selected = 0;
     auto menu = Menu({
         .entries = &entries,
@@ -111,6 +81,7 @@ int main() {
     });
     screen.Loop(menu);
     
+    keyState.fill(0);
     Component renderer;
     switch(selected){
         case 0:
@@ -251,5 +222,3 @@ int main() {
     inputThread.join();
     return 0;
 }
-
-
