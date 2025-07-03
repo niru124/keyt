@@ -40,8 +40,7 @@ chmod +x runi.sh
    Press `Ctrl+C` once the correct device is selected.
 
 4. **Start typing**:
-   Begin pressing keys to see them detected and visualized in the TUI. Keyt uses `evtest` under the hood for file:///home/nirantar/keyt.mp4
-accurate key event tracking.
+   Begin pressing keys to see them detected and visualized in the TUI. Keyt uses `evtest` under the hood for accurate key event tracking.
 
 ---
 
