@@ -31,7 +31,7 @@ chmod +x runi.sh
 ## 🕹️ Usage
 
 1. **Run the app**:
-   `./runi.sh`
+   `sudo ./runi.sh`
 
 2. **Select a keyboard layout**:
    Navigate the TUI and choose your keyboard device from the list.
@@ -40,7 +40,8 @@ chmod +x runi.sh
    Press `Ctrl+C` once the correct device is selected.
 
 4. **Start typing**:
-   Begin pressing keys to see them detected and visualized in the TUI. Keyt uses `evtest` under the hood for accurate key event tracking.
+   Begin pressing keys to see them detected and visualized in the TUI. Keyt uses `evtest` under the hood for file:///home/nirantar/keyt.mp4
+accurate key event tracking.
 
 ---
 
@@ -61,21 +62,4 @@ If you're modifying or building from source, make sure FTXUI and any dependencie
 
 ## 🧪 Disclaimer
 
-This tool uses `evtest`, which may require root privileges. Be cautious when running as `sudo`, and only run trusted scripts.
-
----
-
-## 📄 License
-
-MIT License. See `LICENSE` file for details.
-
----
-
-## 🙌 Contributions
-
-Pull requests and issues are welcome! Feel free to fork and enhance the project.
-
-```
-
-Let me know if you’d like the README to include build instructions, dependency installation, or examples/gifs.
-```
+This tool uses `evtest`, which require root privileges. 
