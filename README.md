@@ -1,7 +1,3 @@
-Here's a `README.md` for your **Keyt** project, a keyboard TUI tester using **FTXUI** and **evtest**:
-
----
-
 # Keyt - Terminal UI Keyboard Tester
 
 **Keyt** is a lightweight terminal-based keyboard tester built with [FTXUI](https://github.com/ArthurSonzogni/FTXUI). It uses `evtest` to detect keypresses and provides a simple interactive TUI to visualize your keyboard layout in real time.
@@ -13,7 +9,7 @@ Here's a `README.md` for your **Keyt** project, a keyboard TUI tester using **FT
 Follow these steps to clone, set up, and run **Keyt**:
 
 ```bash
-git clone https://github.com/yourusername/keyt.git
+git clone https://github.com/niru124/keyt
 cd keyt
 chmod +x runi.sh
 ./runi.sh
