@@ -3,6 +3,7 @@
 **Keyt** is a lightweight terminal-based keyboard tester built with [FTXUI](https://github.com/ArthurSonzogni/FTXUI). It uses `evtest` to detect keypresses and provides a simple interactive TUI to visualize your keyboard layout in real time.
 
 ---
+file:///home/nirantar/output.mp4
 
 ## 🚀 Getting Started
 
