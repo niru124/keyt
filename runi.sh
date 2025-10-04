@@ -63,7 +63,7 @@ fi
 
 sed -i "s|/dev/input/event[0-9]*|/dev/input/$selected_event|" "$target_file"
 echo "✅ Device string in $target_file has been updated to /dev/input/$selected_event"
-
+f
 # Step 6: Build or run the project
 echo -e "\n🚀 Step 6: Run the project if already built, otherwise build and run..."
 
